@@ -1,0 +1,155 @@
+/* main.css */
+
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Left Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+/* Profile Container to align image and name */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle and maintains aspect ratio */
+}
+
+/* Name Under Image */
+.profile-name p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer; /* Change cursor to pointer when hovering over the name */
+}
+
+/* Social Media Links */
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media-links a {
+    margin: 0 10px;
+}
+
+.social-media-links img {
+    width: 25px; /* Reduced icon size */
+    height: 25px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-media-links img:hover {
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* Sidebar Navigation */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 0;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    color: #f1f1f1;
+}
+
+.nav-item.active {
+    color: #f1f1f1;
+    background-color: #555;
+    padding-left: 20px;
+    animation: slide 0.3s ease-in-out;
+}
+
+/* Animation */
+@keyframes slide {
+    0% {
+        padding-left: 15px;
+    }
+    100% {
+        padding-left: 20px;
+    }
+}
+
+/* Right Content Section (Scrollable) */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+    height: 100vh;
+    overflow-y: auto; /* Make right content scrollable */
+    background-image: url('images/emile-perron-xrVDYZRGdw4-unsplash.jpg'); /* Add your background image */
+    background-size: cover; /* Ensure the image covers the entire right side */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+/* Stylish Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Hide the home content by default */
+#homeContent {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blank Website</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Profile Container -->
+        <div class="profile-container">
+            <div class="profile-img">
+                <img src="images/Screenshot 2025-04-01 161605.png" alt="Profile Picture">
+            </div>
+            <!-- Name under the image with click refresh -->
+            <div class="profile-name" onclick="refreshPage()">
+                <p>Ayush Vashisth</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-media-links">
+                <a href="https://github.com/ayushvashisth1" target="_blank">
+                    <img src="images/GitHub-Mark-ea2971cee799.png" alt="GitHub">
+                </a>
+                <a href="https://www.snapchat.com/add/ayushvashisth1?share_id=RJrQuKuFjnA&locale=en-IN" target="_blank">
+                    <img src="images/snap.png" alt="Snapchat">
+                </a>
+                <a href="https://www.instagram.com/_ayush_vashisth1?igsh=b2ZzMnB5eWxncmpk" target="_blank">
+                    <img src="images/download.jpg" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/ayush-vashisth-59015a27a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <img src="images/linkdin.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+       
+
+        <script>
+            function activateTabAndRedirect(element, page) {
+                // Activate the tab
+                activateTab(element);
+        
+                // Redirect to the specified page
+                window.location.href = page;
+            }
+        
+            function activateTab(element) {
+                // Remove 'active' class from all tabs
+                const tabs = document.querySelectorAll('.nav-item');
+                tabs.forEach(tab => tab.classList.remove('active'));
+        
+                // Add 'active' class to clicked tab
+                element.classList.add('active');
+            }
+        </script>
+        
+        <ul>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'home.html')">Home</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'about.html')">About</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'project.html')">Projects</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'education.html')">Education</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'Experience.html')">Experience</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'certificate.html')">Certificates</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'resume.html')">Resume</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'contact.html')">Contact</li>
+        </ul>
+        
+        
+</div>
+
+    <div class="content">
+        <div id="homeContent" style="display: flex; justify-content: center; align-items: center; height: 100%; text-align: center; flex-direction: column;">
+            <p style="font-size: 50px; font-weight: bold; color: white; margin-bottom: 0;">Ayush Vashisth</p>
+            <p style="font-size: 30px; font-weight: bold; color: white; margin-top: 0;">I'm Computer Science Student</p>
+        </div>
+        
+        
+    </div>
+    
+
+    <script>
+        function activateTab(item) {
+            // Remove active class from all items
+            const items = document.querySelectorAll('.nav-item');
+            items.forEach(i => i.classList.remove('active'));
+
+            // Add active class to clicked item
+            item.classList.add('active');
+        }
+
+        function refreshPage() {
+            location.reload(); // Refresh the page when name is clicked
+        }
+        
+
+    </script>
+<script src="script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile-container">
+            <div class="profile-img">
+                <img src="images/Screenshot 2025-04-01 161605.png" alt="Profile Picture">
+            </div>
+            <div class="profile-name" onclick="refreshPage()">
+                <p>Ayush Vashisth</p>
+            </div>
+            <div class="social-media-links">
+                <a href="https://github.com/ayushvashisth1" target="_blank"><img src="images/GitHub-Mark-ea2971cee799.png" alt="GitHub"></a>
+                <a href="https://www.snapchat.com/add/ayushvashisth1" target="_blank"><img src="images/snap.png" alt="Snapchat"></a>
+                <a href="https://www.instagram.com/_ayush_vashisth1" target="_blank"><img src="images/download.jpg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/ayush-vashisth-59015a27a" target="_blank"><img src="images/linkdin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <script>
+            function activateTabAndRedirect(element, page) {
+                // Activate the tab
+                activateTab(element);
+        
+                // Redirect to the specified page
+                window.location.href = page;
+            }
+        
+            function activateTab(element) {
+                // Remove 'active' class from all tabs
+                const tabs = document.querySelectorAll('.nav-item');
+                tabs.forEach(tab => tab.classList.remove('active'));
+        
+                // Add 'active' class to clicked tab
+                element.classList.add('active');
+            }
+        </script>
+        
+        <ul>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'home.html')">Home</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'about.html')">About</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'project.html')">Projects</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'education.html')">Education</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'Experience.html')">Experience</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'certificate.html')">Certificates</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'resume.html')">Resume</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'contact.html')">Contact</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div id="resumeContent" class="resume-box">
+            <p>Click below to download my resume:</p>
+            <a href="https://drive.google.com/file/d/14hHgmfKqTGV99VKLLauw27EahKAB8x8I/view?usp=sharing" target="_blank" class="download-btn">Download CV</a>
+        </div>
+    </div>
+
+    <script>
+        function activateTab(item) {
+            const items = document.querySelectorAll('.nav-item');
+            items.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+        }
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    .resume-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    .download-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: white;
+        background: #007bff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    .download-btn:hover {
+        background: #0056b3;
+    }
+</style>

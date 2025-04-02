@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ayush Vashisth</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* Main Content Area */
+        .content {
+            margin-left: 250px; /* Space for sidebar */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full screen height */
+        }
+
+        /* Main Box */
+        .profile-box {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 700px; /* Increased Width */
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .profile-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Image Styling */
+        .profile-box img {
+            width: 180px; /* Bigger Image */
+            height: 180px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        /* Text Content */
+        .profile-text {
+            flex: 1;
+        }
+
+        .profile-text h1 {
+            font-size: 26px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .thin-text {
+            font-size: 16px;
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .bold-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #222;
+            margin-top: 5px;
+        }
+
+        /* Personal Info Box */
+        .personal-info {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 15px;
+        }
+
+        .personal-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .personal-info li {
+            margin: 6px 0;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Profile Container -->
+        <div class="profile-container">
+            <div class="profile-img">
+                <img src="images/Screenshot 2025-04-01 161605.png" alt="Profile Picture">
+            </div>
+            <div class="profile-name" onclick="refreshPage()">
+                <p>Ayush Vashisth</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-media-links">
+                <a href="https://github.com/ayushvashisth1" target="_blank">
+                    <img src="images/GitHub-Mark-ea2971cee799.png" alt="GitHub">
+                </a>
+                <a href="https://www.snapchat.com/add/ayushvashisth1?share_id=RJrQuKuFjnA&locale=en-IN" target="_blank">
+                    <img src="images/snap.png" alt="Snapchat">
+                </a>
+                <a href="https://www.instagram.com/_ayush_vashisth1?igsh=b2ZzMnB5eWxncmpk" target="_blank">
+                    <img src="images/download.jpg" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/ayush-vashisth-59015a27a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <img src="images/linkdin.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+
+       
+
+        <script>
+            function activateTabAndRedirect(element, page) {
+                // Activate the tab
+                activateTab(element);
+        
+                // Redirect to the specified page
+                window.location.href = page;
+            }
+        
+            function activateTab(element) {
+                // Remove 'active' class from all tabs
+                const tabs = document.querySelectorAll('.nav-item');
+                tabs.forEach(tab => tab.classList.remove('active'));
+        
+                // Add 'active' class to clicked tab
+                element.classList.add('active');
+            }
+        </script>
+        
+        <ul>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'home.html')">Home</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'about.html')">About</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'project.html')">Projects</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'education.html')">Education</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'Experience.html')">Experience</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'certificate.html')">Certificates</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'resume.html')">Resume</li>
+            <li class="nav-item" onclick="activateTabAndRedirect(this, 'contact.html')">Contact</li>
+        </ul>
+</div>
+    <!-- Content for About Page -->
+    <div class="content">
+        <div class="profile-box">
+            <!-- Left Side Image -->
+            <img src="images/ayushoffice.jpg" alt="Profile Image">
+            
+            <!-- Right Side Text -->
+            <div class="profile-text">
+                <h1>Ayush Vashisth</h1>
+                <p class="bold-text">Computer Science Student || AIR 40237 Joint Entrance Examination(2023)</p>
+                <p class="bold-text">National Gold Medalist (Drop Roball) || Gold medalist U-17 Baseball</p>
+                <p class="bold-text">Student Liason Team @Training and Placement Cell - Uiet Mdu</p>
+
+                <!-- Personal Info Box -->
+                <div class="personal-info">
+                    <h3>Personal Information</h3>
+                    <ul>
+                        <li><strong>Name:</strong> Ayush Vashisth</li>
+                        <li><strong>Mobile No:</strong> +91 749483178</li>
+                        <li><strong>Date of Birth:</strong> 2nd October 2004</li>
+                        <li><strong>Email:</strong> ayushvashisth04@gmail.com</li>
+                        <li><strong>Location:</strong> India</li>
+                        <li><strong>Skills:</strong> C++, Python, Java, Data Structures & Algorithms, Web Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function activateTab(item) {
+            // Remove active class from all items
+            const items = document.querySelectorAll('.nav-item');
+            items.forEach(i => i.classList.remove('active'));
+
+            // Add active class to clicked item
+            item.classList.add('active');
+        }
+
+        function refreshPage() {
+            location.reload(); // Refresh the page when name is clicked
+        }
+    </script>
+</body>
+</html>
